@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="forms\CreeazaContFreeBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\FreeBookHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\LogareFreeBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\MeniuFreeBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="mockups\MockupMeniuFreeBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="mockups\MockupLogareFreeBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="mockups\MockupCreeazaContFreeBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="mockups\MockupFreeBookHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

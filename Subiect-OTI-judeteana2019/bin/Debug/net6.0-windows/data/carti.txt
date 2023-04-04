@@ -1,0 +1,28 @@
+1,Ciuleandra,Liviu Rebreanu,Literatura clasica
+2,Colt Alb,Jack London,Literatura pentru copii
+3,Enigma Otiliei,George Calinescu,Literatura clasica
+4,Idiotul,Feodor Mihailovici Dostoievski,Literatura clasica
+5,Ciuleandra,Liviu Rebreanu,Literatura clasica
+6,Colt Alb,Jack London,Literatura pentru copii
+7,Enigma Otiliei,George Calinescu,Literatura clasica
+8,Idiotul,Feodor Mihailovici Dostoievski,Literatura clasica
+9,Ion,Liviu Rebreanu,Literatura clasica
+10,La tiganci,Mircea Eliade,Literatura clasica
+11,Maitreyi,Mircea Eliade,Literatura clasica
+12,Romanul adolescentului miop,Mircea Eliade,Literatura clasica
+13,Patul lui Procust,Camil Petrescu,Literatura clasica
+14,Anna Karenina,Lev Tolstoi,Literatura clasica
+15,Casa Buddenbrook,Thomas Mann,Literatura clasica
+16,Rosu si negru,Stendhal,Literatura clasica
+17,Marele Gatsby,F. Scott Fitzgerald,Literatura clasica
+18,La rascruce de vanturi,Emily Bronte,Literatura clasica
+19,Mara,Ioan Slavici,Literatura clasica
+20,Romeo si Julieta,William Shakespeare,Literatura clasica
+21,Ulita Copilariei,Ionel Teodoreanu,Literatura pentru copii
+22,Micul print,Antoine de Saint-Exupery,Literatura pentru copii
+23,Poezii,Otilia Cazimir,Literatura pentru copii
+24,Hansel si Grethel,Fratii Grimm,Literatura pentru copii
+25,Marele plan,Stephen Hawking,Stiinta
+26,Teoria Universala,Stephen Hawking,Stiinta
+27,Cum vad eu lumea,Albert Einstein,Stiinta
+28,Ascensiunea omului,Jacob Bronowski,Stiinta
