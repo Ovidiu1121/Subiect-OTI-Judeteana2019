@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Subiect_OTI_judeteana2019
+namespace Subiect_OTI_judeteana2019.model
 {
     public class Utilizator
     {
@@ -30,35 +30,35 @@ namespace Subiect_OTI_judeteana2019
         {
             string[] a = prop.Split(",");
 
-            this.email=a[0];
-            this.parola = a[1];
-            this.nume = a[2];
-            this.prenume = a[3];
+            email=a[0];
+            parola = a[1];
+            nume = a[2];
+            prenume = a[3];
 
         }
 
         public string Email
         {
-            get { return this.email; }
-            set { this.email = value; }
+            get { return email; }
+            set { email = value; }
         }
 
         public string Parola
         {
-            get { return this.parola; }
-            set { this.parola = value;}
+            get { return parola; }
+            set { parola = value; }
         }
 
         public string Nume
         {
-            get { return this.nume; }
-            set { this.nume = value;}
+            get { return nume; }
+            set { nume = value; }
         }
 
         public string Prenume
         {
-            get { return this.prenume;}
-            set { this.prenume = value;}
+            get { return prenume; }
+            set { prenume = value; }
         }
 
         public string description()
@@ -66,10 +66,10 @@ namespace Subiect_OTI_judeteana2019
 
             string text = "";
 
-            text+=this.email+",";
-            text+=this.parola+",";
-            text+=this.nume+",";
-            text+=this.prenume+"\n";
+            text+=email+",";
+            text+=parola+",";
+            text+=nume+",";
+            text+=prenume+"\n";
 
             return text;
 
@@ -80,10 +80,10 @@ namespace Subiect_OTI_judeteana2019
 
             string text = "";
 
-            text+=this.email+",";
-            text+=this.parola+",";
-            text+=this.nume+",";
-            text+=this.prenume;
+            text+=email+",";
+            text+=parola+",";
+            text+=nume+",";
+            text+=prenume;
 
             return text;
 

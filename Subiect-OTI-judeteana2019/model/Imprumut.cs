@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Subiect_OTI_judeteana2019
+namespace Subiect_OTI_judeteana2019.model
 {
     public class Imprumut
     {
-        private string titlu;
+        private int id;
+        private int id_carte;
         private string email;
         private DateTime data;
 
@@ -17,9 +18,10 @@ namespace Subiect_OTI_judeteana2019
 
         }
 
-        public Imprumut(string titlu,string email,DateTime data)
+        public Imprumut(int id, int id_carte, string email, DateTime data)
         {
-            this.titlu = titlu;
+            this.id = id;
+            this.id_carte = id_carte;
             this.email = email;
             this.data = data;
         }
@@ -28,7 +30,7 @@ namespace Subiect_OTI_judeteana2019
         {
             string[] a = prop.Split("*");
 
-            this.titlu = a[0];
+            this.id_carte = int.Parse(a[0]);
             this.email = a[1];
             this.data=DateTime.Parse(a[2]);
 
@@ -38,9 +40,10 @@ namespace Subiect_OTI_judeteana2019
         {
             string text = "";
 
-            text+=this.titlu+",";
-            text+=this.email+",";
-            text+=this.data+"\n";
+            text+=id+",";
+            text+=this.id_carte+",";
+            text+=email+",";
+            text+=data+"\n";
 
             return text;
         }
@@ -49,29 +52,36 @@ namespace Subiect_OTI_judeteana2019
         {
             string text = "";
 
-            text+=this.titlu+"*";
-            text+=this.email+"*";
-            text+=this.data;
+            text+=id+"*";
+            text+=id_carte+"*";
+            text+=email+"*";
+            text+=data;
 
             return text;
         }
 
-        public string Titlu
+        public int Id
         {
-            get { return this.titlu; }
-            set { this.titlu = value;}
+            get { return this.id; }
+            set { this.id = value; }
+        }
+
+        public int Id_carte
+        {
+            get { return this.id_carte;}
+            set { this.id_carte = value;}
         }
 
         public string Email
         {
-            get { return this.email; }
-            set { this.email = value;}
+            get { return email; }
+            set { email = value; }
         }
 
         public DateTime Data
         {
-            get { return this.data; }
-            set { this.data = value;}
+            get { return data; }
+            set { data = value; }
         }
 
 

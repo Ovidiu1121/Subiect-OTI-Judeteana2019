@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Subiect_OTI_judeteana2019.controller;
+using Subiect_OTI_judeteana2019.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

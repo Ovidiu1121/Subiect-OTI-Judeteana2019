@@ -1,15 +1,16 @@
-﻿using System;
+﻿using Subiect_OTI_judeteana2019.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Subiect_OTI_judeteana2019
+namespace Subiect_OTI_judeteana2019.controller
 {
     public class ControlImprumut
     {
 
-        private List<Imprumut>lista=new List<Imprumut>();
+        private List<Imprumut> lista = new List<Imprumut>();
         private string path = Application.StartupPath+@"\data\imprumuturi.txt";
 
         public ControlImprumut()
@@ -20,13 +21,13 @@ namespace Subiect_OTI_judeteana2019
         public void load()
         {
 
-            StreamReader read=new StreamReader(path);
+            StreamReader read = new StreamReader(path);
 
             string line = "";
 
             while ((line=read.ReadLine())!=null)
             {
-                Imprumut a=new Imprumut(line);
+                Imprumut a = new Imprumut(line);
                 lista.Add(a);
             }
             read.Close();
@@ -37,7 +38,7 @@ namespace Subiect_OTI_judeteana2019
 
             string text = "";
 
-            for(int i = 0; i<lista.Count; i++)
+            for (int i = 0; i<lista.Count; i++)
             {
                 text+=lista[i].description()+"\n";
             }
@@ -50,7 +51,7 @@ namespace Subiect_OTI_judeteana2019
             string text = "";
             int i = 0;
 
-            for(i=0; i<lista.Count-1; i++)
+            for (i=0; i<lista.Count-1; i++)
             {
                 text+=lista[i].save();
             }
@@ -61,7 +62,7 @@ namespace Subiect_OTI_judeteana2019
 
         public void salvareFisier()
         {
-            StreamWriter writer=new StreamWriter(path);
+            StreamWriter writer = new StreamWriter(path);
 
             writer.WriteLine(toSave());
 
@@ -73,9 +74,9 @@ namespace Subiect_OTI_judeteana2019
         {
             List<string> titluri = new List<string>();
 
-            for(int i=0; i<lista.Count; i++)
+            for (int i = 0; i<lista.Count; i++)
             {
-                if (this.lista[i].Email.Equals(email))
+                if (lista[i].Email.Equals(email))
                 {
                     titluri.Add(lista[i].Email);
                 }
@@ -85,7 +86,7 @@ namespace Subiect_OTI_judeteana2019
 
         public List<Imprumut> getList()
         {
-            return this.lista;
+            return lista;
         }
 
     }

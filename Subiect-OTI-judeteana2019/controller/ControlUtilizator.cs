@@ -1,31 +1,32 @@
-﻿using System;
+﻿using Subiect_OTI_judeteana2019.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Subiect_OTI_judeteana2019
+namespace Subiect_OTI_judeteana2019.controller
 {
     public class ControlUtilizator
     {
-        private List<Utilizator> lista=new List<Utilizator>();
+        private List<Utilizator> lista = new List<Utilizator>();
         string path = Application.StartupPath+@"data\utilizatori.txt";
 
         public ControlUtilizator()
         {
-            this.load();
+            load();
         }
 
         public void load()
         {
-            StreamReader read=new StreamReader(path);
+            StreamReader read = new StreamReader(path);
 
             string line = "";
 
             while ((line=read.ReadLine())!=null)
             {
                 Utilizator utilizator = new Utilizator(line);
-                this.lista.Add(utilizator);
+                lista.Add(utilizator);
             }
 
             read.Close();
@@ -36,7 +37,7 @@ namespace Subiect_OTI_judeteana2019
 
             string text = "";
 
-            for(int i = 0; i<lista.Count; i++)
+            for (int i = 0; i<lista.Count; i++)
             {
                 text+=lista[i].description();
             }
@@ -45,7 +46,7 @@ namespace Subiect_OTI_judeteana2019
 
         public void adaugare(Utilizator a)
         {
-            this.lista.Add(a);
+            lista.Add(a);
         }
 
         public string toSave()
@@ -54,7 +55,7 @@ namespace Subiect_OTI_judeteana2019
 
             int i = 0;
 
-            for(i = 0; i<lista.Count-1; i++)
+            for (i = 0; i<lista.Count-1; i++)
             {
                 text+=lista[i].save()+"\n";
             }
@@ -65,18 +66,18 @@ namespace Subiect_OTI_judeteana2019
 
         public void salvareFisier()
         {
-            StreamWriter write=new StreamWriter(path);
+            StreamWriter write = new StreamWriter(path);
 
             write.WriteLine(toSave());
 
             write.Close();
         }
 
-        public bool isUtilizator(string email,string parola)
+        public bool isUtilizator(string email, string parola)
         {
-            for(int i = 0; i<lista.Count; i++)
+            for (int i = 0; i<lista.Count; i++)
             {
-                if (this.lista[i].Email.Equals(email)&&this.lista[i].Parola.Equals(parola))
+                if (lista[i].Email.Equals(email)&&lista[i].Parola.Equals(parola))
                 {
                     return true;
                 }
@@ -88,7 +89,7 @@ namespace Subiect_OTI_judeteana2019
         {
             for (int i = 0; i<lista.Count; i++)
             {
-                if (this.lista[i].Email.Equals(email)&&this.lista[i].Parola.Equals(parola))
+                if (lista[i].Email.Equals(email)&&lista[i].Parola.Equals(parola))
                 {
                     return lista[i];
                 }

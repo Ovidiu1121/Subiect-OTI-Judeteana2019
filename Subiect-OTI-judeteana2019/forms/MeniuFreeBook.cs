@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Subiect_OTI_judeteana2019.controller;
+using Subiect_OTI_judeteana2019.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -103,7 +105,7 @@ namespace Subiect_OTI_judeteana2019
                 if (x.Email.Equals(utilizator.Email))
                 {
                     DateTime data = x.Data.AddDays(30);
-                    dt.Rows.Add(i, x.Titlu, this.controlCarte.getAutorByTitlu(x.Titlu), x.Data, data);
+                    dt.Rows.Add(i, this.controlCarte.getTitleById(x.Id_carte), this.controlCarte.getAutorById(x.Id_carte), x.Data, data);
                     i++;
                 }
             }

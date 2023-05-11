@@ -1,15 +1,16 @@
-﻿using System;
+﻿using Subiect_OTI_judeteana2019.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Subiect_OTI_judeteana2019
+namespace Subiect_OTI_judeteana2019.controller
 {
     public class ControlCarte
     {
 
-        private List<Carte> lista=new List<Carte>();
+        private List<Carte> lista = new List<Carte>();
         string path = Application.StartupPath+@"data\carti.txt";
 
         public ControlCarte()
@@ -26,7 +27,7 @@ namespace Subiect_OTI_judeteana2019
             while ((line=read.ReadLine())!=null)
             {
                 Carte carte = new Carte(line);
-                this.lista.Add(carte);
+                lista.Add(carte);
             }
 
             read.Close();
@@ -46,7 +47,7 @@ namespace Subiect_OTI_judeteana2019
 
         public void adaugare(Carte a)
         {
-            this.lista.Add(a);
+            lista.Add(a);
         }
 
         public string toSave()
@@ -75,15 +76,28 @@ namespace Subiect_OTI_judeteana2019
 
         public List<Carte> getList()
         {
-            return this.lista;
+            return lista;
         }
 
-        public string getAutorByTitlu(string titlu)
+        public string getTitleById(int id)
         {
 
-            for(int i=0; i<lista.Count; i++)
+            for (int i = 0; i<lista.Count; i++)
             {
-                if (lista[i].Titlu.Equals(titlu))
+                if (lista[i].Id.Equals(id))
+                {
+                    return lista[i].Titlu;
+                }
+            }
+            return null;
+        }
+
+        public string getAutorById(int id)
+        {
+
+            for (int i = 0; i<lista.Count; i++)
+            {
+                if (lista[i].Autor.Equals(id))
                 {
                     return lista[i].Autor;
                 }
